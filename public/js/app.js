@@ -11231,6 +11231,7 @@ __webpack_require__(31);
  */
 
 Vue.component('example', __webpack_require__(34));
+Vue.config.debug = true;
 
 var app = new Vue({
   el: '#app'

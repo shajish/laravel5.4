@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return view('welcome');
+	return view('vue');
 });
 
 Route::get('/chat',function(){
@@ -23,3 +23,6 @@ Route::get('/test',function(){
 
 	return view('test',['company'=>'Techtatva']);
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
