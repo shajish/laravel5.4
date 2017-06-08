@@ -1,0 +1,22 @@
+html,body{
+	margin:0px;
+	padding: 0px;
+	background-color: #ecf0f1;
+}
+.container{
+	margin: 0px;
+	padding: 0px;
+}
+
+.front-section{
+	margin:0px;
+	height: 100vh;
+	width: 100vw;
+	background-color: #009688;
+	content: center;
+	color: white;
+}
+
+.front-section span{
+
+}

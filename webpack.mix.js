@@ -16,4 +16,5 @@ const { mix } = require('laravel-mix');
  .js('resources/assets/js/app.js', 'public/js')
  .copy('resources/assets/js/semantic.min.js', 'public/js')
  .sass('resources/assets/sass/app.scss', 'public/css')
+ .less('resources/assets/less/icon.less','public/css')
  .style(['public/css/semantic.min.css'],'public/css/custom.min.css');

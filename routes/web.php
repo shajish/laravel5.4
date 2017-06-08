@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Storage;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,19 +12,30 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/generate/models', '\\Jimbolino\\Laravel\\ModelBuilder\\ModelGenerator5@start');
 
-Route::get('/', function () {
-	return view('vue');
-});
+// Route::get('/', function () {
+// 	return view('vue');
+// });
 
-Route::get('/chat',function(){
-	return view('chat');
-});
-
-Route::get('/test',function(){
-
+/*Route::get('/test',function(){
 	return view('test',['company'=>'Techtatva']);
-});
-Auth::routes();
+});*/
 
-Route::get('/home', 'HomeController@index');
+// Auth::routes();
+
+// Route::get('/home', 'HomeController@index');
+
+Route::resource('file','File\FileController');
+
+
+Route::get('delete',function(){
+	 return redirect()->route('file.index')->with('message',"One item deleted");
+	
+});
+
+// Route::group(['prefix'=>'ui'],function(){
+	// 	Route::get('/',function(){
+	// 		return view('pages.ui.cardlayout');
+	// 	});
+// });
